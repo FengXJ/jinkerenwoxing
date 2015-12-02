@@ -40,14 +40,21 @@
 
     _window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     app = [UIApplication sharedApplication].delegate;
+    float touXiangY;
     
-    _touXiangImageView = [[UIImageView alloc]initWithFrame:CGRectMake(self.view.frame.size.width/2-65, 80, 130, 130)];
+    if (IS_INCH_3_5) {
+        touXiangY = 40;
+    }else{
+        touXiangY = 80;
+    }
+    
+    _touXiangImageView = [[UIImageView alloc]initWithFrame:CGRectMake(self.view.frame.size.width/2-65, touXiangY, 130, 130)];
     self.touXiangImageView.image = [UIImage imageNamed:@"usermorenbeijing"];
     self.touXiangImageView.layer.cornerRadius = self.touXiangImageView.frame.size.width / 2;
     self.touXiangImageView.clipsToBounds = YES;
     [self.view addSubview:_touXiangImageView];
     
-    self.nicheng = [[UILabel alloc]initWithFrame:CGRectMake(self.view.frame.size.width/2-100, 230, 200, 18)];
+    self.nicheng = [[UILabel alloc]initWithFrame:CGRectMake(self.view.frame.size.width/2-100, touXiangY+150, 200, 18)];
     self.nicheng.font = [UIFont fontWithName:@"Blazed" size:18];
     self.nicheng.textAlignment = NSTextAlignmentCenter;
     self.nicheng.hidden = YES;

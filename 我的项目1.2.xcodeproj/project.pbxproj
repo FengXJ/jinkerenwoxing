@@ -72,6 +72,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2A06ACDA1C0F28D4006152C5 /* UiFrameHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UiFrameHeader.pch; sourceTree = "<group>"; };
 		2A23C03C1BD8C9A30002DE36 /* shetuanController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = shetuanController.h; path = controller/shetuanController.h; sourceTree = "<group>"; };
 		2A23C03D1BD8C9A30002DE36 /* shetuanController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = shetuanController.m; path = controller/shetuanController.m; sourceTree = "<group>"; };
 		2A23C0451BD8D10F0002DE36 /* shetuan.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = shetuan.plist; sourceTree = "<group>"; };
@@ -317,6 +318,7 @@
 		2A6E50481BA55D4800A39482 /* 我的项目1.2 */ = {
 			isa = PBXGroup;
 			children = (
+				2A06ACDA1C0F28D4006152C5 /* UiFrameHeader.pch */,
 				2A342DBF1BF064FF00433800 /* zhucedenglu（注册登录） */,
 				2AE0655A1BAAEE0000F25453 /* NewFeatuer */,
 				2AE065611BAAEE0000F25453 /* Information（个人信息） */,
@@ -836,6 +838,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREFIX_HEADER = "${SRCROOT}/我的项目1.2/UiFrameHeader.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -878,6 +881,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "${SRCROOT}/我的项目1.2/UiFrameHeader.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
