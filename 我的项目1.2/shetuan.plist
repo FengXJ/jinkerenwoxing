@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>摄影社</key>
+	<dict>
+		<key>jianjie</key>
+		<string>这是摄影爱好者的天堂</string>
+		<key>xuhao</key>
+		<string>1</string>
+	</dict>
+	<key>瑜伽社</key>
+	<dict>
+		<key>jianjie</key>
+		<string>这是瑜伽爱好者的天堂</string>
+		<key>xuhao</key>
+		<string>2</string>
+	</dict>
+	<key>街舞社</key>
+	<dict>
+		<key>jianjie</key>
+		<string>来跳舞吧</string>
+		<key>xuhao</key>
+		<string>3</string>
+	</dict>
+	<key>跆拳道社</key>
+	<dict>
+		<key>jianjie</key>
+		<string>锻炼身体</string>
+		<key>xuhao</key>
+		<string>4</string>
+	</dict>
+	<key>书法社</key>
+	<dict>
+		<key>xuhao</key>
+		<string>5</string>
+		<key>jianjie</key>
+		<string>书法天堂</string>
+	</dict>
+	<key>手工社</key>
+	<dict>
+		<key>xuhao</key>
+		<string>6</string>
+		<key>jianjie</key>
+		<string>手工天堂</string>
+	</dict>
+	<key>电竞社</key>
+	<dict>
+		<key>jianjie</key>
+		<string>电子竞技的魅力！</string>
+		<key>xuhao</key>
+		<string>7</string>
+	</dict>
+</dict>
+</plist>

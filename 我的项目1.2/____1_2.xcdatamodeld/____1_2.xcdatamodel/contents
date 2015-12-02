@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9057" systemVersion="15B42" minimumToolsVersion="Automatic">
+    <entity name="Dongtai" representedClassName="Dongtai" syncable="YES">
+        <attribute name="dongtaiID" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="dongtaineirong" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fabiaoren" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fabiaorenId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fabiaoshijian" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fatierenname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="huifuren" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="huifushijian" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="yidu" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="zan" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="Dongtaizan" representedClassName="Dongtaizan" syncable="YES">
+        <attribute name="dianzanren" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="dongtaiID" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="shifoudianzan" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Shetuanlianmeng" representedClassName="Shetuanlianmeng" syncable="YES">
+        <attribute name="fatieren" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fatieshijian" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="loucengshu" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="shetuanming" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tieziID" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="tiezineirong" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tiezizhuti" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Tiezis" representedClassName="Tiezis" syncable="YES">
+        <attribute name="fabiaoren" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fabiaorenId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fatierenname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fatieshijian" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="loucengshu" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="mokuai" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tiezibiaoti" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tieziID" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="tiezineirong" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Userzhanghu" representedClassName="Userzhanghu" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nianling" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nicheng" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pwd" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="save" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sex" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="touxiangpath" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="xinqing" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="xueyuan" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="WeiboSDK" representedClassName="WeiboSDK" syncable="YES">
+        <attribute name="access_token" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="expires_in" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="recordTime" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="remind_in" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="uid" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Yidenglu" representedClassName="Yidenglu" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Dongtai" positionX="-45" positionY="81" width="128" height="195"/>
+        <element name="Dongtaizan" positionX="-36" positionY="117" width="128" height="90"/>
+        <element name="Shetuanlianmeng" positionX="-54" positionY="36" width="128" height="30"/>
+        <element name="Tiezis" positionX="-54" positionY="63" width="128" height="180"/>
+        <element name="Userzhanghu" positionX="-63" positionY="-18" width="128" height="180"/>
+        <element name="WeiboSDK" positionX="-45" positionY="108" width="128" height="120"/>
+        <element name="Yidenglu" positionX="-45" positionY="54" width="128" height="60"/>
+    </elements>
+</model>
