@@ -37,7 +37,6 @@
     [self setController:informationc withTitle:@"个人信息" withNormalImage:@"Main" withSelectImage:@"Main_select"];
     
     
-    
 }
 //创建一个tabbar的具体子控制器对象
 -(void)setController:(UIViewController *)vc1
