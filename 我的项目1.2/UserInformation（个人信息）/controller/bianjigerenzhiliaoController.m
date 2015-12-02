@@ -42,10 +42,7 @@
     app = [UIApplication sharedApplication].delegate;
     [self rigthitem];
     [self uiInit];
-    
-   
-    
-    
+
 }
 
 -(void)uiInit{

@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface MainWorkController : UIViewController
+
 - (void)viewDidLoad;
+
 @end

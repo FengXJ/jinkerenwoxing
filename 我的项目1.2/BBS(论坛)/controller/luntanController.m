@@ -22,8 +22,6 @@
 }
 @property (strong, nonatomic) IBOutlet UITableView *mytableview;
 
-
-
 @end
 
 @implementation luntanController

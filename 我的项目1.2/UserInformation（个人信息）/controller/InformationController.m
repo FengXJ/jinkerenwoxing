@@ -46,11 +46,8 @@
     }else{
         yonghu = [app chaXunUserInformationBy:self.chaKan];
     }
-   
-    
     //初始化UI
     [self uiInit];
-    
     //初始化一下
     imagePiker = [[UIImagePickerController alloc] init];
     //设置委托
@@ -265,19 +262,13 @@
     }
     NSString *filePath = [[paths objectAtIndex:0] stringByAppendingPathComponent:ImageName];   // 保存文件的名称
     [UIImagePNGRepresentation(image)writeToFile: filePath    atomically:YES];
-    
-    
-    
     NSError *error = nil;
     if ([app.managedObjectContext save:&error] ) {
         NSLog(@"保存成功");
-        
     }
     else {
         NSLog(@"添加youxiangpath对象到coredata出错 %@",error);
     }
-
-    
     //结束操作
     [self dismissViewControllerAnimated:YES completion:nil];
 }
@@ -308,9 +299,7 @@
         touXiangimg = [UIImage imageNamed:@"usermorenbeijing"];
     }
     touXiangImageView.image = touXiangimg;
-
-   
-    
+ 
 }
 
 @end

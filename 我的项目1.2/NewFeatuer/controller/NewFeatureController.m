@@ -21,7 +21,7 @@
     if (self) {
     //初始化分页和scrollView控件
         
-        _scrollV.frame = self.view.bounds;
+    _scrollV.frame = self.view.bounds;
         
     CGFloat scrollW = _scrollV.width;
     CGFloat scrollH = _scrollV.height;
@@ -46,7 +46,6 @@
     _scrollV.bounces = NO;
     //图片移动到一半，自动分页
     _scrollV.pagingEnabled = YES;
-    
     _scrollV.delegate = self;
     [self.view addSubview:_PageControl];
     }
@@ -121,14 +120,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
