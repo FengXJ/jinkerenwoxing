@@ -9,10 +9,12 @@
 #import "RegisterController.h"
 #import "AppDelegate.h"
 #import "Userzhanghu.h"
+#import "NIMSDK.h"
+#import "AFNetworking.h"
 
 @interface RegisterController (){
     AppDelegate *app;
-    
+    AFHTTPRequestOperationManager * mananger;
 }
 
 @property (strong, nonatomic) IBOutlet UITextField *username;
@@ -105,7 +107,11 @@
                     BOOL flag = YES;
                     [self showAlert:@"注册成功" isSuccess:flag];                    //如果成功 返回上一个界面
                     
-                    
+                    NSArray *imgPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask, YES);
+                    NSString *imgFilePath = [[imgPaths objectAtIndex:0] stringByAppendingPathComponent:[NSString stringWithFormat:@"usermorenbeijing.png"]];
+                    NSURL *imageUrl = [NSURL URLWithString:imgFilePath];
+                 
+                    [self WYZhuceWithUserID:userzhanghuming name:yonghunicheng imageURL:imageUrl pwd:pwd];
                 }
                 else {
                     NSLog(@"添加Books对象到coredata出错 %@",error);
@@ -187,5 +193,40 @@
     
     return YES;
 }
-
+//云信ID注册
+-(void)WYZhuceWithUserID:(NSString*)userID name:(NSString*)name imageURL:(NSURL*)imageURL pwd:(NSString*)pwd{
+//    mananger = [AFHTTPRequestOperationManager manager];
+//    mananger.responseSerializer = [AFJSONResponseSerializer serializer];
+//    mananger.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript", @"text/plain",nil];
+    
+    NSURL *url = [NSURL URLWithString:@"https://api.netease.im/nimserver/user/create.action"];
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url
+                                                                cachePolicy:NSURLRequestUseProtocolCachePolicy
+                                                            timeoutInterval:30];
+    [request setHTTPMethod:@"Post"];
+    
+    [request addValue:@"application/x-www-form-urlencoded;charset=utf-8" forHTTPHeaderField:@"Content-Type"];
+//    [request addValue:@"nim_demo_ios" forHTTPHeaderField:@"User-Agent"];
+    [request addValue:@"77c44b600ce04eac70bd5780676f180e" forHTTPHeaderField:@"appkey"];
+    
+    NSString *postData = [NSString stringWithFormat:@"username=%@&password=%@&nickname=%@",userID,pwd,name];
+    [request setHTTPBody:[postData dataUsingEncoding:NSUTF8StringEncoding]];
+    AFHTTPRequestOperation *op = [[AFHTTPRequestOperation alloc] initWithRequest:request];
+    [op setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"%@222222",responseObject);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"%@11111111",error);
+    }];
+//    NSMutableDictionary *WYdic = [[NSMutableDictionary alloc]init];
+//    [WYdic setValue:userID forKey:@"accid"];
+//    [WYdic setValue:name forKey:@"name"];
+//    [WYdic setValue:imageURL forKey:@"icon"];
+    
+//    [mananger POST:@"https://api.netease.im/nimserver/user/create.action" parameters:WYdic success:^(AFHTTPRequestOperation *operation, id responseObject) {
+//        NSLog(@"%@1111111111",operation);
+//        NSLog(@"%@2222222222",responseObject);
+//    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+//        
+//    }];
+     }
 @end

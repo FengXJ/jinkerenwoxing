@@ -11,6 +11,7 @@
 #import "LoginController.h"
 #import "Yidenglu.h"
 #import "WeiboSDK.h"
+#import "NIMSDK.h"
 
 
 @interface AppDelegate (){
@@ -29,7 +30,8 @@
     // Override point for customization after application launch.
     
     [self switchController];
-
+    [[NIMSDK sharedSDK] registerWithAppID:@"77c44b600ce04eac70bd5780676f180e"
+                                  cerName:nil];
    
     
     return YES;
@@ -76,37 +78,7 @@
     yonghu = [result objectAtIndex:0];
     NSString *yingdengluyonghu = yonghu.name;
     return yingdengluyonghu;
-//    NSLog(@"%@",yingdengluyonghu);
-//    //根据以登录名获取用户信息
-//    NSEntityDescription * yonghuxinxi = [NSEntityDescription entityForName:model inManagedObjectContext:app.managedObjectContext];
-//    NSFetchRequest * request2 = [[NSFetchRequest alloc] init];
-//    [request2 setEntity:yonghuxinxi];
-//    
-//    [request2 setPredicate:[NSPredicate predicateWithFormat:@"name=%@",yingdengluyonghu]];
-//    NSError *error2 = nil;
-//    NSArray *result2 = [app.managedObjectContext executeFetchRequest:request2 error:&error2];
-//    
-//    //根据查询到的信息显示名字和昵称
-//    Userzhanghu *yonghu2 = nil;
-//    yonghu2 = [result2 objectAtIndex:0];
 }
-//-(NSString *)returnnicheng{
-//    NSString *yidengluyonghu = [self chaxunyidengluyonghuming];
-//    app = [UIApplication sharedApplication].delegate;
-//    //查询已登录表有没有信息
-//    NSEntityDescription * entityyidenglu = [NSEntityDescription entityForName:@"Userzhanghu" inManagedObjectContext:app.managedObjectContext];
-//    NSFetchRequest * request1 = [[NSFetchRequest alloc] init];
-//    [request1 setEntity:entityyidenglu];
-//    
-//    [request1 setPredicate:[NSPredicate predicateWithFormat:@"name=%@",yidengluyonghu]];
-//    NSError *error = nil;
-//    NSArray *result = [app.managedObjectContext executeFetchRequest:request1 error:&error];
-//    user =nil;
-//    //获取已登录名
-//    user = [result objectAtIndex:0];
-//    NSString *nicheng = user.nicheng;
-//    return nicheng;
-//}
 -(Userzhanghu *)returnzhanghu{
     NSString *yidengluyonghu = [self chaxunyidengluyonghuming];
     app = [UIApplication sharedApplication].delegate;
@@ -124,23 +96,6 @@
     user1 = [result objectAtIndex:0];
     
     return user1;
-}
-- (void)applicationWillResignActive:(UIApplication *)application {
-    // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-    // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
-}
-
-- (void)applicationDidEnterBackground:(UIApplication *)application {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-}
-
-- (void)applicationWillEnterForeground:(UIApplication *)application {
-    // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
-}
-
-- (void)applicationDidBecomeActive:(UIApplication *)application {
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
