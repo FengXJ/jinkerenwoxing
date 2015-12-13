@@ -156,7 +156,6 @@
         NSLog(@"保存成功");
         //如果成功 返回上一个界面
         [self.navigationController popViewControllerAnimated:YES];
-        
     }
     else {
         NSLog(@"添加userzhanghu对象到coredata出错 %@",error);

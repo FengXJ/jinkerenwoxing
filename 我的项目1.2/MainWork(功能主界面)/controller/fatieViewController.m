@@ -114,9 +114,7 @@
         if ([app.managedObjectContext save:&error] ) {
             [self showAlert];
             //如果成功 返回上一个界面
-            
 
-            
         }
         else {
             NSLog(@"添加Books对象到coredata出错 %@",error);
