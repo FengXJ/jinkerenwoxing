@@ -397,6 +397,7 @@
 				2A342D9C1BEB318500433800 /* weibocanshu.m */,
 			);
 			name = "weiboshouquan(微博授权)";
+			path = ..;
 			sourceTree = "<group>";
 		};
 		2A342DAE1BEB3EEC00433800 /* controller */ = {
@@ -544,7 +545,6 @@
 			isa = PBXGroup;
 			children = (
 				2A6E50771BA55E5400A39482 /* other */,
-				2A342DAD1BEB3EC700433800 /* weiboshouquan(微博授权) */,
 				2A6E50731BA55E5400A39482 /* catelog */,
 				2A6E50741BA55E5400A39482 /* controller */,
 				2A6E50751BA55E5400A39482 /* lib */,
@@ -594,6 +594,7 @@
 				2A342D561BE9DC6B00433800 /* AFNetworking */,
 				2A6E504D1BA55D4800A39482 /* AppDelegate.h */,
 				2A6E504E1BA55D4800A39482 /* AppDelegate.m */,
+				2A342DAD1BEB3EC700433800 /* weiboshouquan(微博授权) */,
 			);
 			path = other;
 			sourceTree = "<group>";

@@ -69,7 +69,7 @@
         }
         //得到当前时间
         NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
-        [formatter setDateFormat:@"yyyy-MM--dd HH:mm:ss"];
+        [formatter setDateFormat:@"yyyy--MM--dd HH:mm:ss"];
         NSString *datetime = [formatter stringFromDate:[NSDate date]];
         //判定帖子ID是否重复
         for (int tieziid = 0; tiezi>=0; tieziid++) {
