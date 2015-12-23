@@ -9,6 +9,7 @@
 #import "RegisterController.h"
 #import "AppDelegate.h"
 #import "Userzhanghu.h"
+#import "EaseMob.h"
 
 @interface RegisterController (){
     AppDelegate *app;
@@ -104,7 +105,13 @@
                 if ([app.managedObjectContext save:&error] ) {
                     BOOL flag = YES;
                     [self showAlert:@"注册成功" isSuccess:flag];                    //如果成功 返回上一个界面
-                    
+                    [[EaseMob sharedInstance].chatManager asyncRegisterNewAccount:userzhanghuming password:pwd withCompletion:^(NSString *username, NSString *password, EMError *error) {
+                        if (!error) {
+                            NSLog(@"注册成功");
+                        }else{
+                            NSLog(@"%@",error);
+                        }
+                    } onQueue:nil];
                     
                 }
                 else {

@@ -10,6 +10,7 @@
 #import "MainController.h"
 #import "AppDelegate.h"
 #import "Yidenglu.h"
+#import "EaseMob.h"
 
 
 @interface LoginController (){
@@ -115,7 +116,6 @@
                 NSLog(@"删除失败");
             
             }
-        }else{
         }
             Yidenglu *yidenglu = nil;
             yidenglu = [NSEntityDescription insertNewObjectForEntityForName:@"Yidenglu" inManagedObjectContext:app.managedObjectContext];
@@ -124,7 +124,13 @@
             //保存coredata的数据
             if ([app.managedObjectContext save:&error] ) {
                 //用segue进入主界面tab控制器
-                [self performSegueWithIdentifier:@"Maintab" sender:self];
+                [[EaseMob sharedInstance].chatManager asyncLoginWithUsername:@"8001" password:@"111111" completion:^(NSDictionary *loginInfo, EMError *error) {
+                    if (!error && loginInfo) {
+                        [self performSegueWithIdentifier:@"Maintab" sender:self];
+                        NSLog(@"登陆成功");
+                    }
+                } onQueue:nil];
+                
                 
             }
             else {
