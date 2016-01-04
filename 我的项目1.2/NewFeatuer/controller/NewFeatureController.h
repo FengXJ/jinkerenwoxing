@@ -10,8 +10,8 @@
 #import "UIView+Extension.h"
 
 @interface NewFeatureController : UIViewController<UIScrollViewDelegate>
-@property (strong, nonatomic) IBOutlet UIScrollView *scrollV;
-@property (strong, nonatomic) IBOutlet UIPageControl *PageControl;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollV;
+@property (weak, nonatomic) IBOutlet UIPageControl *PageControl;
 @property (strong, nonatomic) IBOutlet UIImageView *ImageV;
 
 @end

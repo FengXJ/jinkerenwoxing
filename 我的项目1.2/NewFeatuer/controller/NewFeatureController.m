@@ -21,7 +21,7 @@
     if (self) {
     //初始化分页和scrollView控件
         
-    _scrollV.frame = self.view.bounds;
+    _scrollV.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
         
     CGFloat scrollW = _scrollV.width;
     CGFloat scrollH = _scrollV.height;
@@ -53,7 +53,7 @@
 }
 -(void)setUpdate:(UIImageView*)imageView{
     UIButton *starBtn = [[UIButton alloc]init];
-    starBtn.frame=CGRectMake(170, 300, 50, 30);
+    starBtn.frame=CGRectMake(SCREEN_WIDTH-180, SCREEN_HEIGHT-220, 50, 30);
     [starBtn setTitle:@"进入" forState:UIControlStateNormal];
     [starBtn addTarget:self action:@selector(enter) forControlEvents:UIControlEventTouchUpInside];
     imageView.userInteractionEnabled = YES;
@@ -83,7 +83,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    _scrollV.frame = self.view.bounds;
+    _scrollV.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
     
     CGFloat scrollW = _scrollV.width;
     CGFloat scrollH = _scrollV.height;
@@ -111,7 +111,8 @@
     
     _scrollV.delegate = self;
     [self.view addSubview:_PageControl];
-    
+     NSLog(@"%lf,%lf",SCREEN_HEIGHT,SCREEN_WIDTH);
+   
     
 }
 

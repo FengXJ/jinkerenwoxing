@@ -179,7 +179,7 @@
 }
 
 //点击输入框 使toolbar上弹
--(BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
+- (void)textFieldDidBeginEditing:(UITextField *)textField{
     CGFloat offset = self.view.frame.size.height - (self.passWard.frame.origin.y+self.passWard.frame.size.height+216+40);
     if (offset<=0) {
         [UIView animateWithDuration:0.1 animations:^{
@@ -191,9 +191,8 @@
             //            self.mytoolbar.frame=frame1;
         }];
     }
-    return YES;
-}
 
+}
 -(void)textFieldDidEndEditing:(UITextField *)textField{
     BOOL flag =[app isUser:self.userName.text];
     if (flag) {

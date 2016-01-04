@@ -54,6 +54,8 @@
 		2A9E9BCA1BDF9A020097EFCE /* fatieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9E9BC91BDF9A020097EFCE /* fatieViewController.m */; };
 		2A9E9BD31BDFA5A60097EFCE /* DandutieziController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9E9BD21BDFA5A60097EFCE /* DandutieziController.m */; };
 		2A9E9C571BE745180097EFCE /* fadongtaiController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9E9C561BE745180097EFCE /* fadongtaiController.m */; };
+		2AA5D93E1C3A467A00346E5A /* UIUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA5D93D1C3A467A00346E5A /* UIUtil.m */; };
+		2AA5D9421C3A468700346E5A /* LCFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA5D9401C3A468700346E5A /* LCFont.m */; };
 		2AA6A7D41C2A8E7A00A0DBBE /* EaseMob.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2AA6A7D21C2A8E7A00A0DBBE /* EaseMob.bundle */; };
 		2AA6A7D61C2A8ECA00A0DBBE /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AA6A7D51C2A8ECA00A0DBBE /* MobileCoreServices.framework */; };
 		2AA6A7D81C2A8ED300A0DBBE /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AA6A7D71C2A8ED300A0DBBE /* CFNetwork.framework */; };
@@ -174,6 +176,11 @@
 		2A9E9BD21BDFA5A60097EFCE /* DandutieziController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DandutieziController.m; path = controller/DandutieziController.m; sourceTree = "<group>"; };
 		2A9E9C551BE745180097EFCE /* fadongtaiController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fadongtaiController.h; sourceTree = "<group>"; };
 		2A9E9C561BE745180097EFCE /* fadongtaiController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = fadongtaiController.m; sourceTree = "<group>"; };
+		2AA5D93C1C3A467A00346E5A /* UIUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIUtil.h; sourceTree = "<group>"; };
+		2AA5D93D1C3A467A00346E5A /* UIUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIUtil.m; sourceTree = "<group>"; };
+		2AA5D93F1C3A468700346E5A /* LCFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCFont.h; sourceTree = "<group>"; };
+		2AA5D9401C3A468700346E5A /* LCFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCFont.m; sourceTree = "<group>"; };
+		2AA5D9411C3A468700346E5A /* UiFrameHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UiFrameHeader.pch; sourceTree = "<group>"; };
 		2AA6A76B1C2A8E7A00A0DBBE /* EMCallManagerCallDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMCallManagerCallDelegate.h; sourceTree = "<group>"; };
 		2AA6A76C1C2A8E7A00A0DBBE /* EMCallManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMCallManagerDelegate.h; sourceTree = "<group>"; };
 		2AA6A76D1C2A8E7A00A0DBBE /* EaseMob+CallService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EaseMob+CallService.h"; sourceTree = "<group>"; };
@@ -526,6 +533,11 @@
 		2A6E50771BA55E5400A39482 /* other */ = {
 			isa = PBXGroup;
 			children = (
+				2AA5D93F1C3A468700346E5A /* LCFont.h */,
+				2AA5D9401C3A468700346E5A /* LCFont.m */,
+				2AA5D9411C3A468700346E5A /* UiFrameHeader.pch */,
+				2AA5D93C1C3A467A00346E5A /* UIUtil.h */,
+				2AA5D93D1C3A467A00346E5A /* UIUtil.m */,
 				2A342D561BE9DC6B00433800 /* AFNetworking */,
 				2A06ACDA1C0F28D4006152C5 /* UiFrameHeader.pch */,
 				2A6E504D1BA55D4800A39482 /* AppDelegate.h */,
@@ -1140,6 +1152,8 @@
 				2A9E9C571BE745180097EFCE /* fadongtaiController.m in Sources */,
 				2A342D731BE9DC6B00433800 /* AFURLResponseSerialization.m in Sources */,
 				2AE065411BAAE77900F25453 /* NavigatationController.m in Sources */,
+				2AA5D9421C3A468700346E5A /* LCFont.m in Sources */,
+				2AA5D93E1C3A467A00346E5A /* UIUtil.m in Sources */,
 				2A62395A1BD0AE2F00E8D1F8 /* Yidenglu.m in Sources */,
 				2A342D6D1BE9DC6B00433800 /* AFHTTPRequestOperationManager.m in Sources */,
 				2A342D751BE9DC6B00433800 /* CMainPageTabBarController.m in Sources */,
