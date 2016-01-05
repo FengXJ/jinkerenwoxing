@@ -38,6 +38,7 @@
     
     NSArray *result = nil;
     result = [ app.managedObjectContext executeFetchRequest:request error:&error];
+     self.automaticallyAdjustsScrollViewInsets =NO;
     return result;
 }
 - (void)viewDidLoad {

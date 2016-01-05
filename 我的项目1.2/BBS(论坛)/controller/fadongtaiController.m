@@ -132,7 +132,7 @@
     
 }
 -(void)showAlert{
-    UIAlertController *successAlert = [UIAlertController alertControllerWithTitle:nil message:@"回复成功" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertController *successAlert = [UIAlertController alertControllerWithTitle:nil message:@"发表成功" preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction *SureAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
         [self.navigationController popViewControllerAnimated:YES];
     }];

@@ -51,6 +51,7 @@
     
     self.MytablerView.userInteractionEnabled = YES;
     self.huifutextfiled.userInteractionEnabled = YES;
+    self.automaticallyAdjustsScrollViewInsets =NO;
 }
 
 - (void)didReceiveMemoryWarning {

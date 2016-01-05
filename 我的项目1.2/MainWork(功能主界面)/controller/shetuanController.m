@@ -33,6 +33,7 @@
     self.shetuans = [NSDictionary dictionaryWithContentsOfFile:[mainBundle pathForResource:@"shetuan" ofType:@"plist"]];
     
     self.shetuan = [self.shetuans allKeys];
+
 }
 
 - (void)didReceiveMemoryWarning {

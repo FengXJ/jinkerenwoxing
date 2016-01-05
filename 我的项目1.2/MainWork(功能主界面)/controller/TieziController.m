@@ -42,6 +42,7 @@
     [request setPredicate: [NSPredicate predicateWithFormat:@"mokuai=%@ AND tieziID!=nil AND loucengshu = 0 ",self.mokuaiming]];
     NSError *error = nil;
     tiezisarr = [ app.managedObjectContext executeFetchRequest:request error:&error];
+    self.automaticallyAdjustsScrollViewInsets =NO;//取消留白
     [self rigthitem];
 }
 //    @property (nullable, nonatomic, retain) NSString *fabiaoren;
