@@ -39,30 +39,30 @@
     return YES;
 }
 -(void)switchController{
-//    NSString *key =@"CFBundleVersion";
-//    //获取当前软件版本号
-//    NSDictionary *dict = [NSBundle mainBundle].infoDictionary;
-//    NSString *currentVersion = dict[key];
-//    //根据用户偏好设置获取以前存储的值
-//    NSString *lastVersion = [[NSUserDefaults standardUserDefaults] objectForKey:key];
-//    if ([currentVersion isEqualToString:lastVersion]) {
-//        BOOL flag = [self boolweiboshouquan];
-//        if (flag == YES) {
-//            UIStoryboard * stroyboard= [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-//            UITabBarController * homePageViewController = [stroyboard instantiateViewControllerWithIdentifier:@"Maintab"];
-//            self.window.rootViewController = homePageViewController;
-//        }else{
-//            UIStoryboard * stroyboard= [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-//            UIViewController * homePageViewController = [stroyboard instantiateViewControllerWithIdentifier:@"LoginController"];
-//            self.window.rootViewController = homePageViewController;
-//        }
-// 
-//    }else{ //把当前软件最新版本写进沙盒的用户偏好设置里面
+    NSString *key =@"CFBundleVersion";
+    //获取当前软件版本号
+    NSDictionary *dict = [NSBundle mainBundle].infoDictionary;
+    NSString *currentVersion = dict[key];
+    //根据用户偏好设置获取以前存储的值
+    NSString *lastVersion = [[NSUserDefaults standardUserDefaults] objectForKey:key];
+    if ([currentVersion isEqualToString:lastVersion]) {
+        BOOL flag = [self boolweiboshouquan];
+        if (flag == YES) {
+            UIStoryboard * stroyboard= [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+            UITabBarController * homePageViewController = [stroyboard instantiateViewControllerWithIdentifier:@"Maintab"];
+            self.window.rootViewController = homePageViewController;
+        }else{
+            UIStoryboard * stroyboard= [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+            UIViewController * homePageViewController = [stroyboard instantiateViewControllerWithIdentifier:@"LoginController"];
+            self.window.rootViewController = homePageViewController;
+        }
+ 
+    }else{ //把当前软件最新版本写进沙盒的用户偏好设置里面
         NewFeatureController *newController = [[NewFeatureController alloc]init];
         self.window.rootViewController = newController;
-//        [[NSUserDefaults standardUserDefaults]setObject:currentVersion forKey:key];
-//        [[NSUserDefaults standardUserDefaults]synchronize];
-//    }
+        [[NSUserDefaults standardUserDefaults]setObject:currentVersion forKey:key];
+        [[NSUserDefaults standardUserDefaults]synchronize];
+    }
     
 }
 -(NSString *)chaxunyidengluyonghuming{

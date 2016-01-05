@@ -124,7 +124,7 @@
             //保存coredata的数据
             if ([app.managedObjectContext save:&error] ) {
                 //用segue进入主界面tab控制器
-                [[EaseMob sharedInstance].chatManager asyncLoginWithUsername:@"8001" password:@"111111" completion:^(NSDictionary *loginInfo, EMError *error) {
+                [[EaseMob sharedInstance].chatManager asyncLoginWithUsername:userzhanghuming password:password completion:^(NSDictionary *loginInfo, EMError *error) {
                     if (!error && loginInfo) {
                         [self performSegueWithIdentifier:@"Maintab" sender:self];
                         NSLog(@"登陆成功");

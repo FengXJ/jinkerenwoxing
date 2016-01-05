@@ -135,7 +135,18 @@
 }
 
 //点击输入框 使toolbar上弹
--(BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
+- (void)textFieldDidBeginEditing:(UITextField *)textField{
+    if (textField == self.username) {
+        CGFloat offset = self.view.frame.size.height - (self.username.frame.origin.y+self.username.frame.size.height+216+40);
+        if (offset<=0) {
+            [UIView animateWithDuration:0.1 animations:^{
+                CGRect frame = self.view.frame;
+                frame.origin.y=offset;
+                self.view.frame = frame;
+                
+            }];
+        }
+    }else{
     CGFloat offset = self.view.frame.size.height - (self.anquanwenti.frame.origin.y+self.anquanwenti.frame.size.height+216+40);
     if (offset<=0) {
         [UIView animateWithDuration:0.1 animations:^{
@@ -145,7 +156,7 @@
 
         }];
     }
-    return YES;
+    }
 }
 //输入完成 键盘还原
 -(BOOL)textFieldShouldEndEditing:(UITextField *)textField{
