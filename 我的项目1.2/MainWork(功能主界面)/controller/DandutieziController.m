@@ -20,8 +20,9 @@
 }
 @property (strong, nonatomic) IBOutlet UIView *zongdeview;
 @property (strong, nonatomic) IBOutlet UITableView *MytablerView;
-@property (strong, nonatomic) IBOutlet UIToolbar *toolbar;
-@property (strong, nonatomic) IBOutlet UITextField *huifutextfiled;
+
+@property (weak, nonatomic) IBOutlet UIView *toolView;
+@property (weak, nonatomic) IBOutlet UITextField *huifutextfiled;
 @property(nonatomic,strong) Tiezis *tiezis;
 
 //传递过来的 模块名 帖子ID
@@ -141,7 +142,7 @@
 
 
 //回复按钮
-- (IBAction)huifubtn:(UIBarButtonItem *)sender {
+- (IBAction)huifubtn:(UIButton *)sender {
     
     if (self.huifutextfiled.text!=nil&&self.huifutextfiled.text.length!=0) {
   
@@ -224,7 +225,7 @@
 
 //点击输入框 使toolbar上弹
 -(BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
-    CGFloat offset = self.zongdeview.frame.size.height - (self.toolbar.frame.origin.y+self.toolbar.frame.size.height+216+40);
+    CGFloat offset = self.zongdeview.frame.size.height - (self.toolView.frame.origin.y+self.toolView.frame.size.height+216+40);
     if (offset<=0) {
         [UIView animateWithDuration:0.3 animations:^{
             CGRect frame = self.view.frame;

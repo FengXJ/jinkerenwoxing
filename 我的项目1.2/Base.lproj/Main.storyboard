@@ -1252,64 +1252,64 @@
                                     <outlet property="delegate" destination="ZwA-ob-3Mp" id="9uP-Mu-9cd"/>
                                 </connections>
                             </tableView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VGk-BN-1s2">
-                                <rect key="frame" x="0.0" y="623" width="371" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="U9R-3v-bqF"/>
-                                </constraints>
-                                <items>
-                                    <barButtonItem style="plain" id="7BX-GE-baO">
-                                        <inset key="imageInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
-                                        <textField key="customView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="LcO-4q-5SQ">
-                                            <rect key="frame" x="16" y="7" width="281" height="30"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits"/>
-                                            <connections>
-                                                <outlet property="delegate" destination="ZwA-ob-3Mp" id="JQp-ax-nz8"/>
-                                            </connections>
-                                        </textField>
-                                    </barButtonItem>
-                                    <barButtonItem title="回复" width="48" id="Kdh-nU-W5H">
-                                        <inset key="imageInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EFD-zG-Pcj">
+                                <rect key="frame" x="-4" y="623" width="383" height="44"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vXF-OP-iQc">
+                                        <rect key="frame" x="13" y="7" width="287" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="pNu-Ex-DYg"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
                                         <connections>
-                                            <action selector="huifubtn:" destination="ZwA-ob-3Mp" id="te1-7z-KMm"/>
+                                            <outlet property="delegate" destination="ZwA-ob-3Mp" id="Lka-GG-Uz8"/>
                                         </connections>
-                                    </barButtonItem>
-                                </items>
-                            </toolbar>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Bx-PA-9kW">
+                                        <rect key="frame" x="331" y="7" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="EEF-4Q-aFb"/>
+                                            <constraint firstAttribute="width" constant="30" id="xw4-Ov-Wae"/>
+                                        </constraints>
+                                        <state key="normal" title="发送"/>
+                                        <connections>
+                                            <action selector="huifubtn:" destination="ZwA-ob-3Mp" eventType="touchUpInside" id="Jcj-ad-I2X"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.96533696338383834" green="0.96533696338383834" blue="0.96533696338383834" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="5Bx-PA-9kW" firstAttribute="leading" secondItem="vXF-OP-iQc" secondAttribute="trailing" constant="31" id="M41-tD-BPD"/>
+                                    <constraint firstAttribute="trailing" secondItem="5Bx-PA-9kW" secondAttribute="trailing" constant="22" id="Q48-LR-2Vt"/>
+                                    <constraint firstItem="vXF-OP-iQc" firstAttribute="top" secondItem="EFD-zG-Pcj" secondAttribute="top" constant="7" id="R7s-fr-Ekz"/>
+                                    <constraint firstItem="vXF-OP-iQc" firstAttribute="leading" secondItem="EFD-zG-Pcj" secondAttribute="leading" constant="13" id="cLf-x7-FiN"/>
+                                    <constraint firstAttribute="height" constant="44" id="eLx-fq-Fjx"/>
+                                    <constraint firstAttribute="bottom" secondItem="vXF-OP-iQc" secondAttribute="bottom" constant="7" id="ojC-Nu-Z7g"/>
+                                    <constraint firstItem="5Bx-PA-9kW" firstAttribute="top" secondItem="EFD-zG-Pcj" secondAttribute="top" constant="7" id="sy0-Jm-88Z"/>
+                                    <constraint firstAttribute="bottom" secondItem="5Bx-PA-9kW" secondAttribute="bottom" constant="7" id="x6z-BD-yZP"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="WGB-zL-SCH" firstAttribute="leading" secondItem="I6M-db-DdR" secondAttribute="leadingMargin" constant="-20" id="6hJ-4P-kvz"/>
-                            <constraint firstItem="VGk-BN-1s2" firstAttribute="leading" secondItem="I6M-db-DdR" secondAttribute="leading" id="7em-Kf-PQe"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="VGk-BN-1s2" secondAttribute="trailing" constant="-20" id="8Bz-vc-1qF"/>
                             <constraint firstAttribute="trailingMargin" secondItem="WGB-zL-SCH" secondAttribute="trailing" constant="-20" id="CUc-uk-e2o"/>
                             <constraint firstItem="WGB-zL-SCH" firstAttribute="top" secondItem="smx-su-vcv" secondAttribute="bottom" constant="-3" id="J2w-6m-U35"/>
-                            <constraint firstItem="HaE-Tg-310" firstAttribute="top" secondItem="VGk-BN-1s2" secondAttribute="bottom" id="JsP-t5-x8h"/>
                             <constraint firstItem="uVH-A5-huc" firstAttribute="leading" secondItem="I6M-db-DdR" secondAttribute="leadingMargin" constant="-20" id="NB3-oJ-SqN"/>
-                            <constraint firstAttribute="trailing" secondItem="VGk-BN-1s2" secondAttribute="trailing" constant="4" id="NIz-38-FpU"/>
                             <constraint firstAttribute="trailingMargin" secondItem="uVH-A5-huc" secondAttribute="trailing" constant="-20" id="OsH-kp-gFs"/>
                             <constraint firstItem="uVH-A5-huc" firstAttribute="top" secondItem="smx-su-vcv" secondAttribute="bottom" constant="35" id="U8B-Mu-gX8"/>
-                            <constraint firstItem="VGk-BN-1s2" firstAttribute="leading" secondItem="I6M-db-DdR" secondAttribute="leadingMargin" constant="-20" id="c3m-Ty-iZL"/>
-                            <constraint firstItem="VGk-BN-1s2" firstAttribute="leading" secondItem="I6M-db-DdR" secondAttribute="leading" id="cMM-74-0a8"/>
-                            <constraint firstAttribute="trailing" secondItem="VGk-BN-1s2" secondAttribute="trailing" id="gXE-94-ycY"/>
+                            <constraint firstItem="HaE-Tg-310" firstAttribute="top" secondItem="EFD-zG-Pcj" secondAttribute="bottom" id="bZb-yn-H05"/>
+                            <constraint firstItem="EFD-zG-Pcj" firstAttribute="leading" secondItem="I6M-db-DdR" secondAttribute="leadingMargin" constant="-20" id="jqm-6V-im1"/>
                             <constraint firstItem="HaE-Tg-310" firstAttribute="top" secondItem="uVH-A5-huc" secondAttribute="bottom" constant="44" id="lF1-Kh-oLv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="EFD-zG-Pcj" secondAttribute="trailing" constant="-20" id="vbA-YU-DHp"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="8Bz-vc-1qF"/>
-                                <exclude reference="c3m-Ty-iZL"/>
-                                <exclude reference="cMM-74-0a8"/>
-                                <exclude reference="gXE-94-ycY"/>
-                            </mask>
-                        </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="MytablerView" destination="uVH-A5-huc" id="LSe-za-UMu"/>
-                        <outlet property="huifutextfiled" destination="LcO-4q-5SQ" id="MnS-i7-uHB"/>
-                        <outlet property="toolbar" destination="VGk-BN-1s2" id="5VB-VF-ADh"/>
+                        <outlet property="huifutextfiled" destination="vXF-OP-iQc" id="W2W-td-V8o"/>
+                        <outlet property="toolView" destination="EFD-zG-Pcj" id="TwZ-jc-Iwl"/>
                         <outlet property="zongdeview" destination="I6M-db-DdR" id="vSG-16-f3F"/>
                     </connections>
                 </viewController>
