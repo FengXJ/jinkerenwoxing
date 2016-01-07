@@ -54,8 +54,9 @@
 		2A9E9BCA1BDF9A020097EFCE /* fatieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9E9BC91BDF9A020097EFCE /* fatieViewController.m */; };
 		2A9E9BD31BDFA5A60097EFCE /* DandutieziController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9E9BD21BDFA5A60097EFCE /* DandutieziController.m */; };
 		2A9E9C571BE745180097EFCE /* fadongtaiController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9E9C561BE745180097EFCE /* fadongtaiController.m */; };
-		2AA5D93E1C3A467A00346E5A /* UIUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA5D93D1C3A467A00346E5A /* UIUtil.m */; };
-		2AA5D9421C3A468700346E5A /* LCFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA5D9401C3A468700346E5A /* LCFont.m */; };
+		2AA5D9871C3D128800346E5A /* SaveCenterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA5D9861C3D128800346E5A /* SaveCenterController.m */; };
+		2AA5D9A01C3E06BD00346E5A /* LCFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA5D99C1C3E06BD00346E5A /* LCFont.m */; };
+		2AA5D9A11C3E06BD00346E5A /* UIUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA5D99F1C3E06BD00346E5A /* UIUtil.m */; };
 		2AA6A7D41C2A8E7A00A0DBBE /* EaseMob.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2AA6A7D21C2A8E7A00A0DBBE /* EaseMob.bundle */; };
 		2AA6A7D61C2A8ECA00A0DBBE /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AA6A7D51C2A8ECA00A0DBBE /* MobileCoreServices.framework */; };
 		2AA6A7D81C2A8ED300A0DBBE /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AA6A7D71C2A8ED300A0DBBE /* CFNetwork.framework */; };
@@ -84,7 +85,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2A06ACDA1C0F28D4006152C5 /* UiFrameHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = UiFrameHeader.pch; path = ../../UiFrameHeader.pch; sourceTree = "<group>"; };
 		2A23C03C1BD8C9A30002DE36 /* shetuanController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = shetuanController.h; path = controller/shetuanController.h; sourceTree = "<group>"; };
 		2A23C03D1BD8C9A30002DE36 /* shetuanController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = shetuanController.m; path = controller/shetuanController.m; sourceTree = "<group>"; };
 		2A23C0451BD8D10F0002DE36 /* shetuan.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = shetuan.plist; sourceTree = "<group>"; };
@@ -176,11 +176,13 @@
 		2A9E9BD21BDFA5A60097EFCE /* DandutieziController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DandutieziController.m; path = controller/DandutieziController.m; sourceTree = "<group>"; };
 		2A9E9C551BE745180097EFCE /* fadongtaiController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fadongtaiController.h; sourceTree = "<group>"; };
 		2A9E9C561BE745180097EFCE /* fadongtaiController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = fadongtaiController.m; sourceTree = "<group>"; };
-		2AA5D93C1C3A467A00346E5A /* UIUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIUtil.h; sourceTree = "<group>"; };
-		2AA5D93D1C3A467A00346E5A /* UIUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIUtil.m; sourceTree = "<group>"; };
-		2AA5D93F1C3A468700346E5A /* LCFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCFont.h; sourceTree = "<group>"; };
-		2AA5D9401C3A468700346E5A /* LCFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCFont.m; sourceTree = "<group>"; };
-		2AA5D9411C3A468700346E5A /* UiFrameHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UiFrameHeader.pch; sourceTree = "<group>"; };
+		2AA5D9851C3D128800346E5A /* SaveCenterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaveCenterController.h; sourceTree = "<group>"; };
+		2AA5D9861C3D128800346E5A /* SaveCenterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaveCenterController.m; sourceTree = "<group>"; };
+		2AA5D99B1C3E06BD00346E5A /* LCFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCFont.h; sourceTree = "<group>"; };
+		2AA5D99C1C3E06BD00346E5A /* LCFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCFont.m; sourceTree = "<group>"; };
+		2AA5D99E1C3E06BD00346E5A /* UIUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIUtil.h; sourceTree = "<group>"; };
+		2AA5D99F1C3E06BD00346E5A /* UIUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIUtil.m; sourceTree = "<group>"; };
+		2AA5D9A21C3E072200346E5A /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		2AA6A76B1C2A8E7A00A0DBBE /* EMCallManagerCallDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMCallManagerCallDelegate.h; sourceTree = "<group>"; };
 		2AA6A76C1C2A8E7A00A0DBBE /* EMCallManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMCallManagerDelegate.h; sourceTree = "<group>"; };
 		2AA6A76D1C2A8E7A00A0DBBE /* EaseMob+CallService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EaseMob+CallService.h"; sourceTree = "<group>"; };
@@ -390,6 +392,8 @@
 				2A6E508F1BA6FF5900A39482 /* LoginController.m */,
 				2A6E50931BA8629E00A39482 /* RegisterController.h */,
 				2A6E50941BA8629E00A39482 /* RegisterController.m */,
+				2AA5D9851C3D128800346E5A /* SaveCenterController.h */,
+				2AA5D9861C3D128800346E5A /* SaveCenterController.m */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -452,6 +456,11 @@
 				2A6E50501BA55D4800A39482 /* ____1_2.xcdatamodeld */,
 				2A6E50491BA55D4800A39482 /* Supporting Files */,
 				2A23C0451BD8D10F0002DE36 /* shetuan.plist */,
+				2AA5D99B1C3E06BD00346E5A /* LCFont.h */,
+				2AA5D99C1C3E06BD00346E5A /* LCFont.m */,
+				2AA5D99E1C3E06BD00346E5A /* UIUtil.h */,
+				2AA5D99F1C3E06BD00346E5A /* UIUtil.m */,
+				2AA5D9A21C3E072200346E5A /* PrefixHeader.pch */,
 			);
 			path = "我的项目1.2";
 			sourceTree = "<group>";
@@ -533,13 +542,7 @@
 		2A6E50771BA55E5400A39482 /* other */ = {
 			isa = PBXGroup;
 			children = (
-				2AA5D93F1C3A468700346E5A /* LCFont.h */,
-				2AA5D9401C3A468700346E5A /* LCFont.m */,
-				2AA5D9411C3A468700346E5A /* UiFrameHeader.pch */,
-				2AA5D93C1C3A467A00346E5A /* UIUtil.h */,
-				2AA5D93D1C3A467A00346E5A /* UIUtil.m */,
 				2A342D561BE9DC6B00433800 /* AFNetworking */,
-				2A06ACDA1C0F28D4006152C5 /* UiFrameHeader.pch */,
 				2A6E504D1BA55D4800A39482 /* AppDelegate.h */,
 				2A6E504E1BA55D4800A39482 /* AppDelegate.m */,
 			);
@@ -1136,6 +1139,7 @@
 				2A6E50911BA6FF5900A39482 /* LoginController.m in Sources */,
 				2A6E507F1BA55F2400A39482 /* UIView+Extension.m in Sources */,
 				2A342DB21BEB3F6200433800 /* Weibouser.m in Sources */,
+				2AA5D9871C3D128800346E5A /* SaveCenterController.m in Sources */,
 				2A342DB81BEDDC9900433800 /* mybutton.m in Sources */,
 				2A9E9BBB1BDF6A940097EFCE /* TieziController.m in Sources */,
 				2A342DBE1BEDDF4200433800 /* Dongtaizan.m in Sources */,
@@ -1151,9 +1155,8 @@
 				2A342E181BF336C400433800 /* bianjigerenzhiliaoController.m in Sources */,
 				2A9E9C571BE745180097EFCE /* fadongtaiController.m in Sources */,
 				2A342D731BE9DC6B00433800 /* AFURLResponseSerialization.m in Sources */,
+				2AA5D9A01C3E06BD00346E5A /* LCFont.m in Sources */,
 				2AE065411BAAE77900F25453 /* NavigatationController.m in Sources */,
-				2AA5D9421C3A468700346E5A /* LCFont.m in Sources */,
-				2AA5D93E1C3A467A00346E5A /* UIUtil.m in Sources */,
 				2A62395A1BD0AE2F00E8D1F8 /* Yidenglu.m in Sources */,
 				2A342D6D1BE9DC6B00433800 /* AFHTTPRequestOperationManager.m in Sources */,
 				2A342D751BE9DC6B00433800 /* CMainPageTabBarController.m in Sources */,
@@ -1178,6 +1181,7 @@
 				2A6E504C1BA55D4800A39482 /* main.m in Sources */,
 				2A342D9D1BEB318500433800 /* weibocanshu.m in Sources */,
 				2A9E9BCA1BDF9A020097EFCE /* fatieViewController.m in Sources */,
+				2AA5D9A11C3E06BD00346E5A /* UIUtil.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1245,7 +1249,8 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREFIX_HEADER = "${SRCROOT}/我的项目1.2/UiFrameHeader.pch";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "${SRCROOT}/我的项目1.2/PrefixHeader.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -1288,7 +1293,8 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "${SRCROOT}/我的项目1.2/UiFrameHeader.pch";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "${SRCROOT}/我的项目1.2/PrefixHeader.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;

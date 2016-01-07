@@ -11,6 +11,8 @@
 #import "AppDelegate.h"
 #import "Yidenglu.h"
 #import "EaseMob.h"
+#import "SaveCenterController.h"
+
 
 
 @interface LoginController (){
@@ -60,6 +62,7 @@
     self.nicheng.textAlignment = NSTextAlignmentCenter;
     self.nicheng.hidden = YES;
     [self.view addSubview:self.nicheng];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -163,12 +166,16 @@
     UIAlertController * alertController = [UIAlertController alertControllerWithTitle: nil                                                                             message: nil                                                                       preferredStyle:UIAlertControllerStyleActionSheet];
     //添加Button
     [alertController addAction: [UIAlertAction actionWithTitle: @"注册" style: UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-        //处理点击拍照
+        
         [self performSegueWithIdentifier:@"zhuce" sender:self];
         
     }]];
     [alertController addAction: [UIAlertAction actionWithTitle: @"安全中心" style: UIAlertActionStyleDefault handler:^(UIAlertAction *action){
-        //处理点击从相册选取
+      
+        
+        SaveCenterController *saveVC = [[SaveCenterController alloc]init];
+        [ self presentViewController:saveVC animated: YES completion:nil];
+
         
         
     }]];
