@@ -7,8 +7,11 @@
 //
 
 #import "ZhangHaoController.h"
+#import "SaveCenterController.h"
 
 @interface ZhangHaoController ()
+
+@property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 
 @end
 
@@ -17,6 +20,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+}
+- (IBAction)backBtn:(id)sender {
+    
+    [ self dismissViewControllerAnimated: YES completion: nil ];
+}
+
+- (IBAction)sureBtn:(id)sender {
+    SaveCenterController *saveVC = [[SaveCenterController alloc]init];
+     [ self presentViewController:saveVC animated: YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -11,7 +11,8 @@
 #import "AppDelegate.h"
 #import "Yidenglu.h"
 #import "EaseMob.h"
-#import "SaveCenterController.h"
+#import "ZhangHaoController.h"
+
 
 
 
@@ -172,9 +173,10 @@
     }]];
     [alertController addAction: [UIAlertAction actionWithTitle: @"安全中心" style: UIAlertActionStyleDefault handler:^(UIAlertAction *action){
       
-        
-        SaveCenterController *saveVC = [[SaveCenterController alloc]init];
-        [ self presentViewController:saveVC animated: YES completion:nil];
+        UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        ZhangHaoController *zhanghaoVC = [[ZhangHaoController alloc]init];
+        zhanghaoVC = [storyBoard instantiateViewControllerWithIdentifier:@"zhanghao"];
+        [ self presentViewController:zhanghaoVC animated: YES completion:nil];
 
         
         

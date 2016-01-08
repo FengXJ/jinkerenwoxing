@@ -28,6 +28,7 @@
 		2A342DBD1BEDDF4200433800 /* Dongtaizan+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A342DBA1BEDDF4200433800 /* Dongtaizan+CoreDataProperties.m */; };
 		2A342DBE1BEDDF4200433800 /* Dongtaizan.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A342DBC1BEDDF4200433800 /* Dongtaizan.m */; };
 		2A342E181BF336C400433800 /* bianjigerenzhiliaoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A342E171BF336C400433800 /* bianjigerenzhiliaoController.m */; };
+		2A43054A1C3F4E450075560F /* ZhangHaoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A4305491C3F4E450075560F /* ZhangHaoController.m */; };
 		2A6239591BD0AE2F00E8D1F8 /* Yidenglu+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A6239561BD0AE2F00E8D1F8 /* Yidenglu+CoreDataProperties.m */; };
 		2A62395A1BD0AE2F00E8D1F8 /* Yidenglu.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A6239581BD0AE2F00E8D1F8 /* Yidenglu.m */; };
 		2A6C73F71BB047CB00D52FB2 /* NewFeatureController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A6C73F61BB047CB00D52FB2 /* NewFeatureController.xib */; };
@@ -127,6 +128,8 @@
 		2A342DBC1BEDDF4200433800 /* Dongtaizan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dongtaizan.m; sourceTree = "<group>"; };
 		2A342E161BF336C400433800 /* bianjigerenzhiliaoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bianjigerenzhiliaoController.h; sourceTree = "<group>"; };
 		2A342E171BF336C400433800 /* bianjigerenzhiliaoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = bianjigerenzhiliaoController.m; sourceTree = "<group>"; };
+		2A4305481C3F4E450075560F /* ZhangHaoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZhangHaoController.h; sourceTree = "<group>"; };
+		2A4305491C3F4E450075560F /* ZhangHaoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZhangHaoController.m; sourceTree = "<group>"; };
 		2A6239551BD0AE2F00E8D1F8 /* Yidenglu+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Yidenglu+CoreDataProperties.h"; path = "main(主界面)/model/Yidenglu+CoreDataProperties.h"; sourceTree = "<group>"; };
 		2A6239561BD0AE2F00E8D1F8 /* Yidenglu+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Yidenglu+CoreDataProperties.m"; path = "main(主界面)/model/Yidenglu+CoreDataProperties.m"; sourceTree = "<group>"; };
 		2A6239571BD0AE2F00E8D1F8 /* Yidenglu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Yidenglu.h; path = "main(主界面)/model/Yidenglu.h"; sourceTree = "<group>"; };
@@ -394,6 +397,8 @@
 				2A6E50941BA8629E00A39482 /* RegisterController.m */,
 				2AA5D9851C3D128800346E5A /* SaveCenterController.h */,
 				2AA5D9861C3D128800346E5A /* SaveCenterController.m */,
+				2A4305481C3F4E450075560F /* ZhangHaoController.h */,
+				2A4305491C3F4E450075560F /* ZhangHaoController.m */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -1136,6 +1141,7 @@
 			files = (
 				2A342D711BE9DC6B00433800 /* AFURLConnectionOperation.m in Sources */,
 				2A342D6C1BE9DC6B00433800 /* AFHTTPRequestOperation.m in Sources */,
+				2A43054A1C3F4E450075560F /* ZhangHaoController.m in Sources */,
 				2A6E50911BA6FF5900A39482 /* LoginController.m in Sources */,
 				2A6E507F1BA55F2400A39482 /* UIView+Extension.m in Sources */,
 				2A342DB21BEB3F6200433800 /* Weibouser.m in Sources */,
