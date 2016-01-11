@@ -13,15 +13,10 @@
 #import "EaseMob.h"
 #import "ZhangHaoController.h"
 
-
-
-
 @interface LoginController (){
 
-
     AppDelegate *app;//定义委托
-    NSMutableArray *userinformation;
-    
+    NSMutableArray *userinformation;    
     
 }
 @property (strong, nonatomic) UIWindow *window;
@@ -161,6 +156,13 @@
     [self presentViewController:successAlert animated:YES completion:nil];
 }
 
+- (IBAction)saveBtn:(id)sender {
+    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    ZhangHaoController *zhanghaoVC = [[ZhangHaoController alloc]init];
+    zhanghaoVC = [storyBoard instantiateViewControllerWithIdentifier:@"zhanghao"];
+    [ self presentViewController:zhanghaoVC animated: YES completion:nil];
+
+}
 
 //sheet按钮事件
 - (IBAction)sheetBtn:(UIButton *)sender {

@@ -10,4 +10,6 @@
 
 @interface SaveCenterController : UIViewController
 
+@property (copy,nonatomic) NSString *UserZhangHaoStr;
+
 @end

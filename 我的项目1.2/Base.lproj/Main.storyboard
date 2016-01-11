@@ -107,6 +107,9 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="saveBtn:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="YzW-Iv-omm"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vLB-9b-WFi">
                                 <rect key="frame" x="172" y="622" width="30" height="30"/>
@@ -224,14 +227,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zho-AT-MmW">
-                                <rect key="frame" x="126" y="124" width="226" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="cYt-x8-PUO"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请输入帐号：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XP5-qK-V5n">
                                 <rect key="frame" x="6" y="128" width="102" height="21"/>
                                 <constraints>
@@ -264,22 +259,36 @@
                                     <constraint firstAttribute="bottom" secondItem="ZvE-RE-Q7c" secondAttribute="bottom" constant="8" id="xTm-7P-DO9"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="shM-3h-IM5">
-                                <rect key="frame" x="20" y="207" width="335" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="shM-3h-IM5">
+                                <rect key="frame" x="16" y="207" width="343" height="30"/>
                                 <color key="backgroundColor" red="0.83530618686868685" green="0.33555006088288158" blue="0.40745622030780748" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="xGZ-4T-J0X"/>
+                                </constraints>
                                 <state key="normal" title="确定"/>
                                 <connections>
                                     <action selector="sureBtn:" destination="Tt0-s0-PEw" eventType="touchUpInside" id="crG-DE-YSG"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zho-AT-MmW">
+                                <rect key="frame" x="126" y="124" width="226" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="cYt-x8-PUO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="zho-AT-MmW" firstAttribute="top" secondItem="XLw-uh-SNv" secondAttribute="bottom" constant="104" id="5Qs-wj-Xh5"/>
                             <constraint firstItem="XP5-qK-V5n" firstAttribute="top" secondItem="XLw-uh-SNv" secondAttribute="bottom" constant="108" id="C8A-ri-ZCQ"/>
+                            <constraint firstItem="shM-3h-IM5" firstAttribute="top" secondItem="zho-AT-MmW" secondAttribute="bottom" constant="53" id="GkF-We-Gd5"/>
                             <constraint firstAttribute="trailingMargin" secondItem="zho-AT-MmW" secondAttribute="trailing" constant="7" id="J3Q-6o-5oN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="shM-3h-IM5" secondAttribute="trailing" id="R9J-cz-pEp"/>
                             <constraint firstItem="XP5-qK-V5n" firstAttribute="leading" secondItem="nRF-sK-6tb" secondAttribute="leadingMargin" constant="-10" id="f4C-6I-Kjr"/>
                             <constraint firstItem="c8T-nv-s5z" firstAttribute="top" secondItem="XLw-uh-SNv" secondAttribute="bottom" id="fDl-0j-nFr"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="shM-3h-IM5" secondAttribute="leading" id="ibs-m3-Scr"/>
                             <constraint firstItem="zho-AT-MmW" firstAttribute="leading" secondItem="XP5-qK-V5n" secondAttribute="trailing" constant="18" id="oLn-tF-ZL1"/>
                             <constraint firstItem="c8T-nv-s5z" firstAttribute="leading" secondItem="nRF-sK-6tb" secondAttribute="leadingMargin" constant="-20" id="ta8-kC-GOi"/>
                             <constraint firstAttribute="trailingMargin" secondItem="c8T-nv-s5z" secondAttribute="trailing" constant="-20" id="yOF-XW-DpN"/>

@@ -25,17 +25,17 @@
     BGimageView.image = [UIImage imageNamed:@"NewFeature-1"];
     [self.view addSubview:BGimageView];
     
-    UIView *headView = [[UIView alloc]initWithFrame:CGRectMake(0, 20, SCREEN_WIDTH, 44)];
-    headView.backgroundColor =[UIColor grayColor];
+    UIView *headView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 64)];
+    headView.backgroundColor =LCHexColor(0xfafafa);
     [self.view addSubview:headView];
     
-    UILabel *titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 44)];
+    UILabel *titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 20, SCREEN_WIDTH, 44)];
     titleLabel.text = @"修改密码";
     titleLabel.textColor = [UIColor whiteColor];
     titleLabel.textAlignment = NSTextAlignmentCenter;
     [headView addSubview:titleLabel];
     
-    UIButton *backbtn = [[UIButton alloc]initWithFrame:CGRectMake(10, 0, 40, 44)];
+    UIButton *backbtn = [[UIButton alloc]initWithFrame:CGRectMake(10, 20, 40, 44)];
     backbtn.backgroundColor = [UIColor clearColor];
     [backbtn setTitle:@"back" forState:UIControlStateNormal];
     [backbtn setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
@@ -54,6 +54,8 @@
     [self.sureBtn setTitle:@"确定" forState:UIControlStateNormal];
     [BGimageView addSubview:self.sureBtn];
     [self.sureBtn addTarget:self action:@selector(sure:) forControlEvents:UIControlEventTouchUpInside];
+    
+    NSLog(@"%@",self.UserZhangHaoStr);
     
 }
 
