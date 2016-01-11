@@ -105,7 +105,8 @@
                 if ([app.managedObjectContext save:&error] ) {
                     BOOL flag = YES;
                     [self showAlert:@"注册成功" isSuccess:flag];                    //如果成功 返回上一个界面
-                    [[EaseMob sharedInstance].chatManager asyncRegisterNewAccount:userzhanghuming password:pwd withCompletion:^(NSString *username, NSString *password, EMError *error) {
+                    //环信密码固定，因为设备会修改密码
+                    [[EaseMob sharedInstance].chatManager asyncRegisterNewAccount:userzhanghuming password:@"baobei2012" withCompletion:^(NSString *username, NSString *password, EMError *error) {
                         if (!error) {
                             NSLog(@"注册成功");
                         }else{

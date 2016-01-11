@@ -97,12 +97,9 @@
      
         if (result2.count!=0) {
 //             1. 实例化查询请求
-        
-            
+  
             // 4. 输出结果
             for (Yidenglu *yidenglu in result2) {
-                
-                
                 // 删除一条记录
                 [app.managedObjectContext deleteObject:yidenglu];
                 break;
@@ -123,7 +120,7 @@
             //保存coredata的数据
             if ([app.managedObjectContext save:&error] ) {
                 //用segue进入主界面tab控制器
-                [[EaseMob sharedInstance].chatManager asyncLoginWithUsername:userzhanghuming password:password completion:^(NSDictionary *loginInfo, EMError *error) {
+                [[EaseMob sharedInstance].chatManager asyncLoginWithUsername:userzhanghuming password:@"baobei2012" completion:^(NSDictionary *loginInfo, EMError *error) {
                     if (!error && loginInfo) {
                         [self performSegueWithIdentifier:@"Maintab" sender:self];
                         NSLog(@"登陆成功");

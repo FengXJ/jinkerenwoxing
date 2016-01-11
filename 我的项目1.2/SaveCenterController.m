@@ -7,8 +7,16 @@
 //
 
 #import "SaveCenterController.h"
+#import "AppDelegate.h"
+#import "SaveTableViewCell.h"
+#import "Userzhanghu.h"
 
-@interface SaveCenterController ()<UITableViewDataSource,UITableViewDelegate>
+@interface SaveCenterController ()<UITableViewDataSource,UITableViewDelegate>{
+    AppDelegate *app;
+    UIView * errorUserView;
+    UILabel *errorLabel;
+    Userzhanghu *user;
+}
 
 @property (nonatomic,strong) UITableView *bodyTableview;
 
@@ -23,6 +31,7 @@
     
     UIImageView *BGimageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 20+44, SCREEN_WIDTH, SCREEN_HEIGHT)];
     BGimageView.image = [UIImage imageNamed:@"NewFeature-1"];
+    BGimageView.userInteractionEnabled = YES;
     [self.view addSubview:BGimageView];
     
     UIView *headView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 64)];
@@ -55,14 +64,75 @@
     [BGimageView addSubview:self.sureBtn];
     [self.sureBtn addTarget:self action:@selector(sure:) forControlEvents:UIControlEventTouchUpInside];
     
-    NSLog(@"%@",self.UserZhangHaoStr);
+    errorUserView = [[UIView alloc]initWithFrame:CGRectMake(SCREEN_WIDTH/2-60, SCREEN_HEIGHT/2+15, 120, 30)];
+    errorUserView.backgroundColor = [UIColor blackColor];
+    errorUserView.hidden = YES;
+    [self.view addSubview:errorUserView];
+    
+    errorLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 120, 30)];
+    errorLabel.textColor = [UIColor whiteColor];
+    errorLabel.textAlignment = NSTextAlignmentCenter;
+    [errorUserView addSubview:errorLabel];
+    
+    app = [UIApplication sharedApplication].delegate;
     
 }
 
 -(void)sure:(id)sender{
+    NSIndexPath *saveIndexpath = [NSIndexPath indexPathForRow:1 inSection:0];
+    SaveTableViewCell *saveCell = [self.bodyTableview cellForRowAtIndexPath:saveIndexpath];
+    NSString *saveText = saveCell.contentTextField.text;
+    
+    NSIndexPath *pwdOneIndex = [NSIndexPath indexPathForRow:0 inSection:1];
+    SaveTableViewCell *pwdOneCell = [self.bodyTableview cellForRowAtIndexPath:pwdOneIndex];
+    NSString *pwdOneStr = pwdOneCell.contentTextField.text;
+    
+    NSIndexPath *pwdTwoIndex  = [NSIndexPath indexPathForRow:1 inSection:1];
+    SaveTableViewCell *pwdTwoCell = [self.bodyTableview cellForRowAtIndexPath:pwdTwoIndex];
+    NSString *pwdTwoStr = pwdTwoCell.contentTextField.text;
+    
+    if ([pwdOneStr isEqual:pwdTwoStr]) {
+        //查找数据 创建实体对象
+        NSEntityDescription * entity = [NSEntityDescription entityForName:@"Userzhanghu" inManagedObjectContext:app.managedObjectContext];
+        //创建抓取数据的对象
+        NSFetchRequest * request = [[NSFetchRequest alloc] init];
+        [request setEntity:entity];
+        NSString *userzhanghuming = self.UserZhangHaoStr;
+        
+        [request setPredicate: [NSPredicate predicateWithFormat:@"name=%@ AND save=%@",userzhanghuming,saveText]];
+        NSError *error = nil;
+        NSArray *array = [ app.managedObjectContext executeFetchRequest:request error:&error];
+        if(array.count == 0){
+            errorLabel.text = @"安全问题输入错误";
+            errorUserView.hidden = NO;
+            NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(disapper:) userInfo:nil repeats:NO];
+        }else{
+            //修改原密码
+            user = nil;
+            user = [array objectAtIndex:0];
+            user.pwd = pwdOneStr;
+            
+            NSError *error = nil;
+            if ([app.managedObjectContext save:&error] ) {
+                NSLog(@"保存成功");
+            }
+            else {
+                NSLog(@"修改安全问题出错 %@",error);
+            }
+        }
+    }else{
+        errorLabel.text = @"两次密码不一致";
+        errorUserView.hidden = NO;
+        NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(disapper:) userInfo:nil repeats:NO];
+    }
     
 }
 
+-(void)disapper:(id)sender{
+    errorUserView.hidden = YES;
+    [sender invalidate];
+    
+}
 -(UIView*)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 
 {
@@ -108,51 +178,11 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *cellID=@"savecell";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
+    SaveTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
     if (cell==nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellID];
+        cell = [[SaveTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellID indexPath:indexPath];
     }
-    cell.backgroundColor = [UIColor whiteColor];
-    UILabel *titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(14, 16.5, 100, 15)];
-    [cell.contentView addSubview:titleLabel];
-    titleLabel.font = [LCFont systemFontOfSize:15];
-    
-    UITextField *contentTextField = [[UITextField alloc]initWithFrame:CGRectMake(titleLabel.x+titleLabel.width, 8, SCREEN_WIDTH-15-titleLabel.x-titleLabel.width, 30)];
-    contentTextField.borderStyle = UITextBorderStyleRoundedRect;
-    
-    [cell.contentView addSubview:contentTextField];
-    
-    UILabel *saveLabel = [[UILabel alloc]initWithFrame:CGRectMake(titleLabel.x+titleLabel.width, 8, SCREEN_WIDTH-15-titleLabel.x-titleLabel.width, 30)];
-    saveLabel.hidden = YES;
-    saveLabel.text = @"您第一次乘坐火车的目的地";
-    [cell.contentView addSubview:saveLabel];
-    
-    if (indexPath.section == 0) {
-        if (indexPath.row == 0) {
-            titleLabel.text = @"安全问题";
-            contentTextField.hidden = YES;
-            saveLabel.hidden = NO;
-            
-        }
-        if (indexPath.row == 1) {
-            titleLabel.text = @"请输入答案";
-            contentTextField.placeholder = @"请输入答案";
-            saveLabel.hidden = YES;
-            contentTextField.hidden = NO;
-        }
-    }
-    
-    if (indexPath.section == 1) {
-        if (indexPath.row == 0) {
-            titleLabel.text = @"请输入新密码";
-            contentTextField.placeholder = @"请输入新密码";
-        }
-        if (indexPath.row == 1) {
-            titleLabel.text = @"再输入新密码";
-            contentTextField.placeholder = @"再输入新密码";
-        }
-    }
-    return cell;
+       return cell;
 }
 // 隐藏多余cell
 
@@ -165,4 +195,7 @@
     [tableView setTableFooterView:view];
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
 @end
