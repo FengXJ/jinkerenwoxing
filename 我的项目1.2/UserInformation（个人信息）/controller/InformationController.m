@@ -53,6 +53,8 @@
     //设置委托
     imagePiker.delegate = self;
     imagePiker.allowsEditing = YES;
+    
+    self.automaticallyAdjustsScrollViewInsets =NO;//顶部不留白
 
 }
 //编辑个人资料

@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface InformationController : UITableViewController<UITableViewDataSource,UITableViewDelegate>
+@interface InformationController : UIViewController<UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic,strong) NSString *chaKan;
 @end

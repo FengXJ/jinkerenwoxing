@@ -141,7 +141,7 @@
 		2A6C73F81BB1811B00D52FB2 /* InformationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InformationController.h; sourceTree = "<group>"; };
 		2A6C73F91BB1811B00D52FB2 /* InformationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InformationController.m; sourceTree = "<group>"; };
 		2A6C73FB1BB1814600D52FB2 /* FriendController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendController.h; sourceTree = "<group>"; };
-		2A6C73FC1BB1814600D52FB2 /* FriendController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendController.m; sourceTree = "<group>"; };
+		2A6C73FC1BB1814600D52FB2 /* FriendController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendController.m; sourceTree = "<group>"; wrapsLines = 1; };
 		2A6C73FE1BB19EEE00D52FB2 /* luntanController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = luntanController.h; sourceTree = "<group>"; };
 		2A6C73FF1BB19EEE00D52FB2 /* luntanController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = luntanController.m; sourceTree = "<group>"; };
 		2A6E50461BA55D4800A39482 /* 我的项目1.2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "我的项目1.2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
