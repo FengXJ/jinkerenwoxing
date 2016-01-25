@@ -23,6 +23,7 @@
     int ChooseBtn;//用于判断是换头像还是换背景
    
 }
+@property (weak, nonatomic) IBOutlet UIView *toolView;
 @property (strong, nonatomic) IBOutlet UITableView *contentTableView;
 @property (strong, nonatomic) IBOutlet UIButton *touXiangbtn;
 @property (strong, nonatomic) IBOutlet UILabel *username;
@@ -302,6 +303,10 @@
     }
     touXiangImageView.image = touXiangimg;
  
+}
+- (IBAction)addFriendBtn:(id)sender {
+}
+- (IBAction)sendMegBtn:(id)sender {
 }
 
 @end

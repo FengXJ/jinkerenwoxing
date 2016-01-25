@@ -209,8 +209,9 @@
 //    flag = [self panduandianzan:sender.dongtaiID withdangqianyonghu:username withbtn:sender];
     
     //然后查询点赞表里有没有点赞
+    //这里要重写 不能使用这个方法 带字母会炸- - 解决了。 需要加''
     NSArray *result = nil;
-    result =  [self useCorodatamodelname:@"Dongtaizan" withrequest:[NSString stringWithFormat:@"dongtaiID = %@ AND dianzanren = %@ ",(NSString *)sender.dongtaiID,username]];
+    result =  [self useCorodatamodelname:@"Dongtaizan" withrequest:[NSString stringWithFormat:@"dongtaiID = %@ AND dianzanren = '%@' ",(NSString *)sender.dongtaiID,username]];
     //如果结果为0 说明还没点赞 设置点赞数+1 修改图片
     if (result.count == 0) {
        
@@ -297,7 +298,7 @@
     }else{
         zanshuliang-=1;
     }
-    
+
     //保存赞
     dongtai1.zan = [NSNumber numberWithInt:zanshuliang];
     NSError * error = nil;

@@ -58,6 +58,7 @@
     [starBtn addTarget:self action:@selector(enter) forControlEvents:UIControlEventTouchUpInside];
     imageView.userInteractionEnabled = YES;
     [imageView addSubview:starBtn];
+    
 }
 -(void)enter
 {
